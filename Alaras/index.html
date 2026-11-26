@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ALARAS — Discover stories beyond your universe.">
+    <title>ALARAS | Enter Another Universe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ALARAS Mystery Entrance -->
+<section id="mysteryEntrance" class="mystery-entrance">
+  <div class="mystery-card">
+
+    <p class="eyebrow">✦ ALARAS ARCHIVES · CASE 001 ✦</p>
+
+    <h1>The Forgotten Reader</h1>
+
+    <p class="mystery-subtitle">
+      Every universe has a secret.
+    </p>
+
+    <div class="mystery-letter">
+      <p>To whoever finds this letter,</p>
+
+      <p>
+        I once entered a universe filled with stories.
+        I thought I had discovered everything, but one
+        secret remained hidden.
+      </p>
+
+      <p>
+        Three clues will lead you to what I left behind.
+        If you are willing to investigate, begin.
+      </p>
+
+      <p class="letter-signature">
+        — A forgotten reader
+      </p>
+    </div>
+
+    <button id="beginInvestigation">
+      Begin the investigation ✦
+    </button>
+
+  </div>
+</section>
+    <header class="navbar">
+        <a href="#" class="logo">ALARAS<span>.</span></a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#library">Library</a>
+            <a href="#my-library">My library</a>
+            <a href="#about">About</a>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">✦ A UNIVERSE OF STORIES ✦</p>
+                <h1>Beyond the stars,<br><span>another story awaits.</span></h1>
+                <p class="hero-description">
+                    Escape the ordinary. Discover unknown worlds,
+                    unforgettable characters and stories waiting to be explored.
+                </p>
+                <a href="#library" class="explore-btn">Explore stories →</a>
+            </div>
+            <div class="hero-decoration">
+                <span>✧</span><span>☾</span><span>✦</span>
+            </div>
+        </section>
+
+        <section class="library" id="library">
+            <div class="section-heading">
+                <p class="eyebrow">YOUR NEXT OBSESSION</p>
+                <h2>EXPLORE THE LIBRARY</h2>
+                <p>Every universe begins with a story.</p>
+            </div>
+
+            <div class="story-grid"
+        id="storyGrid"></div>
+        </section>
+
+        <section class="story-details" id="storyDetails" hidden>
+
+  <button class="back-btn" id="backFromDetails">
+    ← Back to Library
+  </button>
+
+  <div class="story-details-layout">
+
+    <div class="story-details-cover">
+      <img id="detailsCover" src="" alt="">
+    </div>
+
+    <div class="story-details-info">
+      <p class="eyebrow">A STORY BY ANN</p>
+
+      <h2 id="detailsTitle">Not in This Life, Monsieur</h2>
+
+      <p class="story-author" id="detailsAuthor">By Ann</p>
+
+      <p class="story-description" id="detailsDescription">
+        A kingdom on the brink of collapse. A prince whose death changes
+        everything. A woman betrayed by the man she sacrificed everything for.
+      </p>
+
+      <p class="chapter-count" id="detailsChapterCount">
+        2 CHAPTERS
+      </p>
+
+      <button class="read-btn" id="startReading">
+        Begin Reading →
+      </button>
+    </div>
+
+  </div>
+
+  <div class="details-chapters">
+    <h3>Inside this universe</h3>
+    <div id="detailsChapterList"></div>
+  </div>
+
+</section>
+
+
+        <section class="my-library" id="my-library">
+
+    <div class="section-heading">
+        <p class="eyebrow">YOUR PERSONAL TREATS</p>
+        <h2>My Library</h2>
+        <p>Your saved chapters.</p>
+    </div>
+
+    <div class="saved-chapters" id="savedChapters">
+        <p class="empty-library">
+            Your library is waiting for its first saved chapter. ✧
+        </p>
+    </div>
+
+</section>
+
+        <section class="about" id="about">
+            <p class="eyebrow">A PLACE BEYOND IMAGINATION</p>
+            <h2>Stories deserve their own universe.</h2>
+            <p>
+                ALARAS is a space for imagination, creativity
+                and stories that transport us somewhere new.
+            </p>
+        </section>
+
+        <!-- STORY DETAILS AND READER -->
+        <section class="reader-section" id="reader" hidden>
+            <button class="back-btn" id="backToLibrary">← Back to library</button>
+
+            <div class="reader-heading">
+                <p class="eyebrow">ENTER THIS UNIVERSE</p>
+                <h2>Not in This Life, Monsieur</h2>
+            </div>
+
+            <div class="reading-layout">
+                <aside class="chapter-sidebar">
+                    <h3>Chapters</h3>
+                    <div id="chapterList"></div>
+                </aside>
+
+                <div class="chapter-content">
+                    <p class="chapter-number" id="chapterNumber">CHAPTER 1</p>
+                    <h2 id="chapterTitle">Chapter 1</h2>
+
+                    <div id="novelContent" class="novel-content">
+                        <p>Your story text will appear here when you're ready to add it.</p>
+                    </div>
+
+
+                    <div class="chapter-navigation">
+                        <button id="previousChapter">← Previous</button>
+                        <button id="nextChapter">Next chapter →</button>
+                    </div>
+
+                    <!-- Each chapter has its own interaction toolbar -->
+                    <div class="chapter-toolbar">
+                        <button class="like-action" id="likeButton">♡ Like</button>
+                        <button class="save-action" id="saveButton">＋ Save</button>
+                        <button class="comment-action" id="commentButton">Comment</button>
+                    </div>
+
+                    <div class="comments-area" id="commentsArea" hidden>
+                        <h3>Chapter comments</h3>
+                        <div id="commentList"></div>
+                        <form id="commentForm">
+                            <textarea
+                                id="commentInput"
+                                placeholder="Share your thoughts about this chapter..."
+                                required
+                            ></textarea>
+                            <button type="submit">Post comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="logo">ALARAS<span>.</span></a>
+        <p>Every story opens a universe. © 2026 ALARAS</p>
+    </footer>
+
+    <script src="app.js"></script>
+    </body>
+    </html>
