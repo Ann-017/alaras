@@ -1,0 +1,1059 @@
+/* =================================
+   ALARAS — DARK DREAMCORE
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #171525;
+    color: #E7DDF1;
+    font-family: Georgia, serif;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+    background: #201B30;
+    border-bottom: 1px solid #453754;
+}
+
+.logo {
+    color: #E7DDF1;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #B69ACF;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #C7B8D8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.login-btn,
+.explore-btn {
+    background: #A995C5;
+    color: #171525;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.login-btn:hover,
+.explore-btn:hover {
+    background: #E7DDF1;
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 540px;
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at 80% 40%,
+            #493657 0%,
+            transparent 55%
+        ),
+        linear-gradient(135deg, #171525, #292039);
+}
+
+.hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: #B69ACF;
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #B69ACF;
+    font-style: italic;
+}
+
+.hero-description {
+    color: #C7B8D8;
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+.hero-decoration {
+    font-size: 70px;
+    color: #B69ACF;
+    opacity: 0.65;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-decoration span:nth-child(2) {
+    font-size: 120px;
+}
+
+/* LIBRARY */
+
+.library {
+    padding: 90px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2,
+.about h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: #B9A9CA;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
+    justify-content: center;
+    gap: 30px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.story-card {
+    background: #292239;
+    border: 1px solid #51405E;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-6px);
+}
+
+.story-cover {
+    height: 220px;
+    background:
+        radial-gradient(circle at 50% 40%,
+        #A995C5, transparent 25%),
+        linear-gradient(135deg, #40304F, #171525);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    color: #E7DDF1;
+}
+
+.second-cover {
+    background:
+        radial-gradient(circle, #52618D, transparent 35%),
+        linear-gradient(135deg, #222D4C, #171525);
+    font-size: 65px;
+}
+
+.story-info {
+    padding: 25px;
+}
+
+.genre {
+    color: #B69ACF;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.story-info h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.story-info > p:not(.genre) {
+    color: #B9A9CA;
+    margin-bottom: 20px;
+}
+
+.read-btn {
+    color: #E7DDF1;
+    background: transparent;
+    border: 1px solid #A995C5;
+    border-radius: 25px;
+    padding: 10px 18px;
+    cursor: pointer;
+}
+
+/* ABOUT */
+
+.about {
+    text-align: center;
+    padding: 90px 10%;
+    background: #211B30;
+}
+
+.about h2 {
+    color: #D9C6E9;
+}
+
+.about > p:last-child {
+    max-width: 550px;
+    margin: auto;
+    color: #C7B8D8;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    border-top: 1px solid #453754;
+    color: #A995C5;
+    gap: 20px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 75px 8%;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 29px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* READER SECTION */
+
+.reader-section {
+    padding: 60px 6%;
+}
+
+.reader-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.chapter-number {
+    text-align: center;
+    color: #C6ACDF;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 35px;
+    margin-bottom: 12px;
+}
+
+#chapterTitle {
+    text-align: center;
+    color: #F0E5F5;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+#chapterTitle::after {
+    content: "✧ ✦ ✧";
+    display: block;
+    color: #B99BD7;
+    font-size: 15px;
+    letter-spacing: 7px;
+    margin-top: 18px;
+}
+
+.reader-section[hidden],
+[hidden] {
+    display: none !important;
+}
+
+.back-btn {
+    background: transparent;
+    color: #C6ACDF;
+    border: 1px solid #B99BD7;
+    border-radius: 25px;
+    padding: 10px 22px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #B99BD7;
+    color: #211333;
+    transform: translateY(-2px);
+}
+
+.comments-area {
+    max-width: 820px;
+    margin: 35px auto 60px;
+    padding: 30px;
+    background: #30203F;
+    border: 1px solid #604875;
+    border-radius: 12px;
+    color: #EDE5F4;
+}
+
+.comments-area h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: normal;
+    color: #DCC9EF;
+    margin-bottom: 25px;
+}
+
+#commentInput {
+    width: 100%;
+    min-height: 120px;
+    padding: 15px;
+    background: #EDE5F4;
+    color: #382442;
+    border: 1px solid #B99BD7;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    resize: vertical;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#commentInput:focus {
+    border-color: #70C9D5;
+    box-shadow: 0 0 8px rgba(112, 201, 213, 0.3);
+}
+
+#commentInput::placeholder {
+    color: #806C8B;
+}
+
+.chapter-navigation {
+    max-width: 820px;
+    margin: 25px auto 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.chapter-navigation button {
+    background: transparent;
+    color: #EDE5F4;
+    border: 1px solid #B99BD7;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chapter-navigation button:hover:not(:disabled) {
+    background: #B99BD7;
+    color: #211333;
+    transform: translateY(-2px);
+}
+
+.chapter-navigation button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.reader-heading {
+    text-align: center;
+    margin: 45px 0 30px;
+}
+
+.reader-heading h2 {
+    font-size: 2.3rem;
+    margin: 12px 0;
+}
+
+.format-options {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.format-btn {
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 1px solid #806b99;
+    background: #292239;
+    color: #e7ddf1;
+    cursor: pointer;
+}
+
+.format-btn.active {
+    background: #80649e;
+    border-color: #b69acf;
+}
+
+.reading-layout {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 28px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.chapter-sidebar,
+.chapter-content {
+    background: #292239;
+    border: 1px solid #493b5c;
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.chapter-sidebar h3 {
+    margin-top: 0;
+}
+
+.chapter-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    margin: 8px 0;
+    background: transparent;
+    color: #d9c9eb;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.chapter-link.active {
+    background: #443452;
+    border-color: #9b7db8;
+}
+
+.chapter-number,
+.genre {
+    color: #b69acf;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+}
+
+.chapter-content h2 {
+    font-size: 2rem;
+}
+
+.novel-content {
+    white-space: pre-wrap;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 2;
+    letter-spacing: 0.2px;
+
+    color: #382442;
+    background: #af99c2;
+
+    max-width: 820px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 65px 75px;
+
+    border-radius: 5px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.chapter-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+/* CHAPTER INTERACTION COLORS */
+
+.chapter-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-top: 1px solid #493b5c;
+    padding-top: 22px;
+}
+
+.chapter-toolbar button {
+    padding: 11px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.like-action {
+    background: #713f9b;
+    color: white;
+    border: 1px solid #a879d0;
+}
+
+.like-action.selected {
+    background: #9b5dcc;
+}
+
+.save-action {
+    background: #c9b5e8;
+    color: #30223f;
+    border: 1px solid #e1d4f5;
+}
+
+.save-action.selected {
+    background: #a98bd0;
+}
+
+.comment-action {
+    background: #55c8d8;
+    color: #142b35;
+    border: 1px solid #8ce5ee;
+}
+
+.comments-area {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #493b5c;
+}
+
+.comments-area textarea {
+    width: 100%;
+    min-height: 90px;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #806b99;
+    background: #211b31;
+    color: white;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.comments-area form button {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 20px;
+    background: #55c8d8;
+    color: #142b35;
+    cursor: pointer;
+}
+
+.comment-item {
+    padding: 12px;
+    margin: 10px 0;
+    background: #211b31;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+    .reading-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .format-options {
+        flex-direction: column;
+    }
+
+    .chapter-toolbar {
+        gap: 8px;
+    }
+
+    .chapter-toolbar button {
+        flex: 1;
+    }
+}
+/* MY LIBRARY */
+
+.my-library {
+    padding: 80px 8%;
+    background: #211b31;
+    min-height: 350px;
+}
+
+.saved-chapters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+.saved-chapter-card {
+    background: #302640;
+    border: 1px solid #68527f;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.saved-chapter-card h3 {
+    color: #e7ddf1;
+    margin-bottom: 8px;
+}
+
+.saved-chapter-card p {
+    color: #c9b5e8;
+}
+
+.saved-chapter-card button {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #c9b5e8;
+    color: #30223f;
+    cursor: pointer;
+}
+
+.empty-library {
+    color: #c9b5e8;
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 30px;
+}
+
+.story-cover img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.story-details {
+    padding: 70px 8%;
+    color: #f5eafa;
+}
+
+.story-details-layout {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.story-details-cover {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.story-details-cover img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.story-details-info {
+    max-width: 550px;
+}
+
+.story-details-info h2 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+}
+
+.story-description {
+    line-height: 1.9;
+    margin: 25px 0;
+    color: #d5c4df;
+}
+
+.details-chapters {
+    max-width: 1000px;
+    margin: 60px auto 0;
+}
+
+@media (max-width: 700px) {
+    .story-details-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-details-cover {
+        width: 220px;
+    }
+}
+
+.details-chapters {
+    margin-top: 60px;
+}
+
+.details-chapters h3 {
+    color: #e8d5f5;
+    margin-bottom: 20px;
+}
+
+#detailsChapterList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 650px;
+}
+
+#detailsChapterList button {
+    background: rgba(112, 77, 145, 0.18);
+    color: #eadcf5;
+    border: 1px solid rgba(190, 155, 220, 0.3);
+    border-radius: 10px;
+    padding: 18px 22px;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#detailsChapterList button:hover {
+    background: rgba(145, 105, 180, 0.35);
+    border-color: #bd91e8;
+    transform: translateX(5px);
+}
+
+.chapter-toolbar {
+    max-width: 820px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.like-action {
+    background: #6D3B91;
+    color: #FFFFFF;
+    border: 1px solid #A77ACB;
+    border-radius: 25px;
+    padding: 11px 24px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.like-action:hover {
+    background: #8955B0;
+    transform: translateY(-2px);
+}
+
+.save-action {
+    background: #C6ACDF;
+    color: #382442;
+    border: 1px solid #E0CBEF;
+    border-radius: 25px;
+    padding: 11px 24px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-action:hover {
+    background: #DCC9EF;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .story-details-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.story-details-cover img {
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+}
+
+.story-details-info {
+    width: 100%;
+}
+    .novel-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 28px 20px;
+        font-size: 15px;
+        line-height: 1.8;
+        margin: 25px auto;
+        box-sizing: border-box;
+    }
+
+    #chapterTitle {
+        font-size: 27px;
+    }
+
+    .chapter-number {
+        font-size: 10px;
+    }
+
+}
+
+/* ALARAS welcome message */
+.welcome-message {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+    background: #30203F;
+    color: #EDE5F4;
+    border: 1px solid #B99BD7;
+    border-radius: 15px;
+
+    padding: 25px 40px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    text-align: center;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+
+    animation: welcomeFade 3s ease forwards;
+}
+
+@keyframes welcomeFade {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    15% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+}
+
+/* ALARAS — Mystery Entrance */
+
+.mystery-entrance {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    overflow-y: auto;
+    background:
+        radial-gradient(circle at top, #49315F, transparent 55%),
+        #17101F;
+}
+
+.mystery-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px;
+    text-align: center;
+    background: #251B30;
+    border: 1px solid #74558D;
+    border-radius: 22px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.4);
+}
+
+.mystery-card .eyebrow {
+    color: #C5A5E5;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.mystery-card h1 {
+    color: #F0E5FA;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin: 20px 0 10px;
+}
+
+.mystery-subtitle {
+    color: #C8B3D9;
+    font-style: italic;
+}
+
+.mystery-letter {
+    margin: 30px 0;
+    padding: 25px;
+    text-align: left;
+    line-height: 1.9;
+    color: #E4D7ED;
+    background: #30243B;
+    border-radius: 12px;
+}
+
+.letter-signature {
+    text-align: right;
+    font-style: italic;
+    color: #C5A5E5;
+}
+
+.mystery-card button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    background: #A987CE;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.mystery-card button:hover {
+    background: #BA9ADD;
+}
+
+@media (max-width: 600px) {
+    .mystery-card {
+        padding: 25px 18px;
+    }
+
+    .mystery-card h1 {
+        font-size: 32px;
+    }
+}
+
+/* ALARAS Mystery Game Inputs */
+
+.mystery-card input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin: 20px 0;
+    border: 1px solid #74558D;
+    border-radius: 10px;
+    background: #17101F;
+    color: #F0E5FA;
+    font-size: 16px;
+    outline: none;
+}
+
+.mystery-card input:focus {
+    border-color: #C5A5E5;
+}
+
+.mystery-card #clueFeedback {
+    color: #D8BDF2;
+    min-height: 24px;
+    margin: 18px 0;
+}
+
+.mystery-card .hint-button {
+    margin-top: 12px;
+    background: transparent;
+    border: 1px solid #A987CE;
+    color: #D8BDF2;
+}
+
+.mystery-card h2 {
+    color: #E2C7FF;
+    letter-spacing: 3px;
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+/* ALARAS — Mobile Reading Experience */
+
+@media (max-width: 600px) {
+
+    .chapter-content {
+        padding: 12px;
+    }
+
+    .novel-content {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        margin: 15px auto;
+        padding: 25px 20px;
+
+        font-size: 16px;
+        line-height: 1.85;
+        letter-spacing: 0.1px;
+
+        border-radius: 8px;
+    }
+
+    .chapter-content h2 {
+        font-size: 1.5rem;
+    }
+}
